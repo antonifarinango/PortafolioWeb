@@ -147,7 +147,7 @@ function App() {
               </div>
 
               <div className={` div-documento-descarga ${toggleMode ? "" : "div-documento-descarga-light"}`}>
-                    <a href="">Descargar CV</a>
+                    <a href="../public/curriculum-vitae.pdf" download="Anthony Farinango CV">Descargar CV</a>
               </div>
             </section>
             <section id="proyectos">
