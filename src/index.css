@@ -1,0 +1,25 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html{
+  height: 100%;
+}
+body{
+  height: 100%;
+  font-family: "Varela Round", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  color: #fff;
+}
+
+body.dark-mode{
+  
+  background: linear-gradient(to top, #302b63,#0f0c29,#302b63)
+}
+
+body.light-mode{
+  background-color: rgb(255, 255, 255);
+}
+
+
