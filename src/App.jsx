@@ -132,7 +132,7 @@ function App() {
               </div>
               <div className="div-texto-presentacion">
                   <span className={` nombre-presentacion ${toggleMode ? "" : "nombre-presentacion-light"}`}>Anthony FS</span>
-                  <p className="texto-presentacion">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                  <p className="texto-presentacion">Soy un apasionado desarrollador web, siempre aprendiendo y mejorando mis habilidades.</p>
                   <div className="div-redes-presentacion">
                     <a className="redes-presentacion" target="_blank" href="https://github.com/antonifarinango">
                       <img className="img-redes-presentacion" src={toggleMode ? gitHub : gitHubModoClaro} alt="github" />
@@ -147,7 +147,7 @@ function App() {
               </div>
 
               <div className={` div-documento-descarga ${toggleMode ? "" : "div-documento-descarga-light"}`}>
-                    <a href="../public/curriculum-vitae.pdf" download="Anthony Farinango CV">Descargar CV</a>
+                    <a target="_blank" href="https://drive.google.com/file/d/13t1AT82t22fGuorc-qrMJ4ieGxbzmXJt/view?usp=sharing" download="Anthony Farinango CV" >Descargar CV</a>
               </div>
             </section>
             <section id="proyectos">
