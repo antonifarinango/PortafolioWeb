@@ -18,6 +18,7 @@ function Proyecto (props){
                     <img className="img-tecnologias-proyectos" src={props.tecnologia3} alt={props.altTecnologia3}/>
                     <img className="img-tecnologias-proyectos" src={props.tecnologia4} alt={props.altTecnologia4}/>
                     <img className="img-tecnologias-proyectos" src={props.tecnologia5} alt={props.altTecnologia5}/>
+                    <img className="img-tecnologias-proyectos" src={props.tecnologia6} alt={props.altTecnologia6}/>
                 </div>
                 <div className="div-enlaces-proyecto">
                     <a target="_blanck" className="enlace-proyecto" href={props.enlaceWeb}><img className="img-enlace-proyecto" src={props.enlaceImg} alt={props.altEnlace} /></a>

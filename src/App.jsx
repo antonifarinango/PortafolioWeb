@@ -18,6 +18,7 @@ import javascrip from "./assets/tecnologias/js.png"
 import reactImg from "./assets/tecnologias/react.png"
 import java from "./assets/tecnologias/java.png"
 import springboot from "./assets/tecnologias/spring-boot.png"
+import sql from "./assets/tecnologias/sql.png"
 
 //Proyectos Img
 import suwayPageImg from "./assets/proyectosImg/SuwayPageImg.jpg"
@@ -173,7 +174,7 @@ function App() {
               imgProyecto={ToDoList}
               altImgProyecto="to-do-list"
               nombreProyecto="To-Do List"
-              textoProyecto="CRUD de tareas con React y Spring Boot que permite crear, ver, actualizar y eliminar tareas, donde React gestiona la interfaz y Spring Boot maneja la lógica de backend."
+              textoProyecto="CRUD de tareas con React y Spring Boot que permite crear, ver, actualizar y eliminar tareas, donde React gestiona la interfaz, Spring Boot maneja la lógica de backend y se utiliza una base de datos MySQL para el almacenamiento de datos."
               tecnologia1={reactImg}
               altTecnologia1="reactImg"
               tecnologia2={javascrip}
@@ -184,6 +185,8 @@ function App() {
               altTecnologia4="springBootImg"
               tecnologia5={java}
               altTecnologia5="javaImg"
+              tecnologia6={sql}
+              altTecnologia6="sqlImg"
               Imggithub= {toggleMode ? gitHub : gitHubModoClaro}
               enlaceGitHub="https://github.com/antonifarinango/TodoList.git"
               />
@@ -197,6 +200,7 @@ function App() {
                 <div className="div-img-tecnologias"><img className="img-tecnologia" src={reactImg} alt="" /></div>
                 <div className="div-img-tecnologias"><img className="img-tecnologia" src={java} alt="" /></div>
                 <div className="div-img-tecnologias"><img className="img-tecnologia" src={springboot} alt="" /></div>
+                <div className="div-img-tecnologias"><img className="img-tecnologia" src={sql} alt="" /></div>
               </div>
             </section>
             <section id="redes">
