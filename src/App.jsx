@@ -23,7 +23,7 @@ import sql from "./assets/tecnologias/sql.png"
 //Proyectos Img
 import suwayPageImg from "./assets/proyectosImg/SuwayPageImg.jpg"
 import ToDoList from "./assets/proyectosImg/todoList.jpg"
-
+import pokedex from "./assets/proyectosImg/pokedex.jpg"
 
 //Modos
 import luna from "./assets/luna.png"
@@ -159,17 +159,36 @@ function App() {
               nombreProyecto="Página Web de Grupo de Música Folclórica"
               textoProyecto="Página estática que permite, mediante enlaces, contactar con el grupo, así como revisar los diferentes eventos en los que han participado."
               tecnologia1={reactImg}
-              altTecnologia1=""
+              altTecnologia1="reactImg"
               tecnologia2={javascrip}
-              altTecnologia2="Tecnología 2"
+              altTecnologia2="javaScripImg"
               tecnologia3={css}
-              altTecnologia3="Tecnología 3"
+              altTecnologia3="cssImg"
               enlaceImg = {enlace}
-              altEnlace = "enlace"
+              altEnlace = "enlaceImg"
               enlaceWeb="https://suwaypage.netlify.app/"
               enlaceGitHub="https://github.com/antonifarinango/suwayStaticPage.git"
               Imggithub= {toggleMode ? gitHub : gitHubModoClaro} 
               />
+
+              <Proyecto  
+              imgProyecto={pokedex}
+              altImgProyecto="pokedexImg"
+              nombreProyecto="Pokedex"
+              textoProyecto="Aplicación interactiva desarrollada con React que consume la Poke API, permitiendo a los usuarios filtrar y explorar diferentes Pokémon. La interfaz está completamente estilizada con CSS para una experiencia visual atractiva y fluida."
+              tecnologia1={reactImg}
+              altTecnologia1="reactImg"
+              tecnologia2={javascrip}
+              altTecnologia2="javaScripImg"
+              tecnologia3={css}
+              altTecnologia3="cssImg"
+              enlaceImg = {enlace}
+              altEnlace = "enlaceImg"
+              enlaceWeb="https://fsmipokedex.netlify.app/"
+              enlaceGitHub="https://github.com/antonifarinango/Pokedex.git"
+              Imggithub= {toggleMode ? gitHub : gitHubModoClaro} 
+              />
+
               <Proyecto  
               imgProyecto={ToDoList}
               altImgProyecto="to-do-list"
