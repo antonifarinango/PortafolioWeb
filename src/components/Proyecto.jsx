@@ -1,33 +1,66 @@
 import React from "react";
-import "./proyecto.css"
+import "./proyecto.css";
 
-
-function Proyecto (props){
-
-    return(
-        <div className="contenedor-proyectos">
-            <div className="div-img-proyecto">
-                <img className="img-proyecto" src={props.imgProyecto} alt={props.altImgProyecto} />
-            </div>
-            <div className="div-descripcion-proyecto">
-                <span className="nombre-proyecto">{props.nombreProyecto}</span>
-                <p>{props.textoProyecto}</p>
-                <div className="div-img-tecnologias-proyectos">
-                    <img className="img-tecnologias-proyectos" src={props.tecnologia1} alt={props.altTecnologia1} />
-                    <img className="img-tecnologias-proyectos" src={props.tecnologia2} alt={props.altTecnologia2} />
-                    <img className="img-tecnologias-proyectos" src={props.tecnologia3} alt={props.altTecnologia3}/>
-                    <img className="img-tecnologias-proyectos" src={props.tecnologia4} alt={props.altTecnologia4}/>
-                    <img className="img-tecnologias-proyectos" src={props.tecnologia5} alt={props.altTecnologia5}/>
-                    <img className="img-tecnologias-proyectos" src={props.tecnologia6} alt={props.altTecnologia6}/>
-                </div>
-                <div className="div-enlaces-proyecto">
-                    <a target="_blanck" className="enlace-proyecto" href={props.enlaceWeb}><img className="img-enlace-proyecto" src={props.enlaceImg} alt={props.altEnlace} /></a>
-                    <a target="_blanck" className="enlace-proyecto" href={props.enlaceGitHub}><img className="img-enlace-proyecto" src={props.Imggithub} alt="github" /></a>
-                </div>
-            </div>
+function Proyecto({
+  imgProyecto,
+  altImgProyecto,
+  nombreProyecto,
+  textoProyecto,
+  tecnologias = [],
+  enlaces = [],
+  toggleMode,
+  gitHub,
+  gitHubModoClaro,
+}) {
+  return (
+    <div className="contenedor-proyectos">
+      <div className="div-img-proyecto">
+        <img className="img-proyecto" src={imgProyecto} alt={altImgProyecto} />
+      </div>
+      <div className="div-descripcion-proyecto">
+        <span className="nombre-proyecto">{nombreProyecto}</span>
+        <p>{textoProyecto}</p>
+        <div className="div-img-tecnologias-proyectos">
+          {tecnologias.map((tecnologia, index) => (
+            <>
+              <img
+                key={index}
+                className="img-tecnologias-proyectos"
+                src={tecnologia.src}
+                alt={tecnologia.alt || "tecnologia-icon"}
+              />
+            </>
+          ))}
         </div>
-    )
-
+        {/* Solo muestra la sección si hay enlaces */}
+        {enlaces?.length > 0 && (
+          <div className="div-enlaces-proyecto">
+            {enlaces.map((enlace, index) => (
+              <a
+                key={index}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="enlace-proyecto"
+                href={enlace.href || "https://mi-portafolio-fs.netlify.app/"}
+              >
+                <img
+                  className="img-enlace-proyecto"
+                  src={
+                    enlace.imgSrc === "github"
+                      ? toggleMode
+                        ? gitHub
+                        : gitHubModoClaro
+                      : enlace.imgSrc
+                  }
+                  alt="enlace-icon"
+                />
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
 }
 
 export default Proyecto;

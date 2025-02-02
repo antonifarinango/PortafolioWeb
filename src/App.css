@@ -90,17 +90,15 @@
 }
 
 .div-redes-presentacion{
-  width: 100%;
-  height: 60px;
+  width: 100% ;
   display: flex;
-  align-items: center;
   gap: 20px;
 }
 .redes-presentacion{
   height: 40px;
-  display: flex;
   justify-content: center; 
   cursor: pointer;
+  display: flex;
 }
 
 
@@ -109,7 +107,7 @@
 }
 
 .div-documento-descarga{
-  background-color: rgb(112, 214, 166);
+  background-color: rgb(15, 119, 71);
   width: 150px;
   height: 32px;
   border-radius: 10px;
@@ -193,7 +191,7 @@
   border-radius: 20px;
   width: 130px;
   height: 30px;
-  background-color: rgba(248, 248, 248, 0.336);
+  background-color: rgba(160, 157, 157, 0.267);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -287,6 +285,14 @@ p.dark-mode{
   #tecnologias{
     margin-top: -16px;
   }
+  
+}
+
+@media screen and (max-width: 600px) {
+  .header{
+    width: 100%;
+    left: 0;
+  }
 }
 
 @media screen and (max-width:420px) {
@@ -307,9 +313,20 @@ p.dark-mode{
     outline: none;
   }
   
+  .presentacion{
+    box-sizing: border-box;
+    padding-bottom: 30px;
+  }
+
+  .div-img-tecnologias{
+    min-width: 80px;
+    min-height: 80px;
+  }
+
+  .img-tecnologia{
+    height: 57px;
+  }
 }
-
-
 
 
 
