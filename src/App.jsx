@@ -25,6 +25,7 @@ import suwayPageImg from "./assets/proyectosImg/suwaypage.webp";
 import ToDoList from "./assets/proyectosImg/todolist.webp";
 import pokedex from "./assets/proyectosImg/pokedex.webp";
 import peliculas from "./assets/proyectosImg/peliculas.webp";
+import toDoListLocalStorage from "./assets/proyectosImg/todoListLocalStorage.webp";
 
 //Modos
 import luna from "./assets/luna.png";
@@ -192,7 +193,7 @@ function App() {
               >
                 <a
                   target="_blank"
-                  href="https://drive.google.com/file/d/13t1AT82t22fGuorc-qrMJ4ieGxbzmXJt/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1Knu6BC2vsXtJVEX_zVBSpQDG9smkfr77/view?usp=sharing"
                   download="Anthony Farinango CV"
                 >
                   Descargar CV
@@ -210,16 +211,17 @@ function App() {
                 tecnologias={[
                   { src: reactImg, alt: "react-icon" },
                   { src: javascript, alt: "javascript-icon" },
-                  { src: css, alt: "css-icon" }
+                  { src: css, alt: "css-icon" },
+                  { src: html, alt: "html-icon"}
                 ]}
                 enlaces={[
                   {
                     href: "https://fsmipokedex.netlify.app/",
-                    imgSrc: enlaceImg
+                    imgSrc: enlaceImg,
                   },
                   {
                     href: "https://github.com/antonifarinango/Pokedex.git",
-                    imgSrc: "github"
+                    imgSrc: "github",
                   },
                 ]}
                 toggleMode={toggleMode}
@@ -235,18 +237,66 @@ function App() {
                 tecnologias={[
                   { src: reactImg, alt: "react-icon" },
                   { src: javascript, alt: "javascript-icon" },
-                  { src: css, alt: "css-icon" }
+                  { src: css, alt: "css-icon" },
+                  { src: html, alt: "html-icon"}
                 ]}
                 enlaces={[
-                  
                   {
                     href: "https://fs-peliculas.netlify.app/",
-                    imgSrc: enlaceImg
+                    imgSrc: enlaceImg,
                   },
                   {
                     href: "https://github.com/antonifarinango/Peliculas.git",
+                    imgSrc: "github",
+                  },
+                ]}
+                toggleMode={toggleMode}
+                gitHub={gitHub}
+                gitHubModoClaro={gitHubModoClaro}
+              />
+
+              <Proyecto
+                imgProyecto={toDoListLocalStorage}
+                altImgProyecto="todoList-js-img"
+                nombreProyecto="Lista de Tareas"
+                textoProyecto="Aplicación web de lista de tareas desarrollada con JavaScript, CSS y HTML, que permite a los usuarios agregar, marcar como completadas y eliminar tareas. Las tareas se almacenan en el Local Storage, asegurando que persistan incluso después de recargar la página."
+                tecnologias={[
+                  { src: javascript, alt: "javascript-icon" },
+                  { src: css, alt: "css-icon" },
+                  { src: html, alt: "html-icon"}
+                ]}
+                enlaces={[
+                  {
+                    href: "https://todolist-fs.netlify.app/",
+                    imgSrc: enlaceImg,
+                  },
+                  {
+                    href: "https://github.com/antonifarinango/todoListLocalStorage.git",
                     imgSrc: "github"
-                  }
+                  },
+                ]}
+                toggleMode={toggleMode}
+                gitHub={gitHub}
+                gitHubModoClaro={gitHubModoClaro}
+              />
+
+              <Proyecto
+                imgProyecto={suwayPageImg}
+                altImgProyecto="suwaypage"
+                nombreProyecto="Página Web de Grupo de Música Folclórica"
+                textoProyecto="Página estática que permite, mediante enlaces, contactar con el grupo, así como revisar los diferentes eventos en los que han participado."
+                tecnologias={[
+                  { src: reactImg, alt: "react-icon" },
+                  { src: javascript, alt: "javascript-icon" },
+                  { src: css, alt: "css-icon" },
+                  { src: html, alt: "html-icon"}
+                ]}
+                enlaces={[
+                  { href: "https://suwaypage.netlify.app/", imgSrc: enlaceImg },
+                  {
+                    href: "https://github.com/antonifarinango/suwayStaticPage.git",
+                    imgSrc: "github",
+                  },
                 ]}
                 toggleMode={toggleMode}
                 gitHub={gitHub}
@@ -264,34 +314,12 @@ function App() {
                   { src: css, alt: "css-icon" },
                   { src: springboot, alt: "springBoot-icon" },
                   { src: java, alt: "java-icon" },
-                  { src: sql, alt: "sql-icon" }
+                  { src: sql, alt: "sql-icon" },
                 ]}
                 enlaces={[
                   {
                     href: "https://github.com/antonifarinango/TodoList.git",
-                    imgSrc: "github"
-                  },
-                ]}
-                toggleMode={toggleMode}
-                gitHub={gitHub}
-                gitHubModoClaro={gitHubModoClaro}
-              />
-
-              <Proyecto
-                imgProyecto={suwayPageImg}
-                altImgProyecto="suwaypage"
-                nombreProyecto="Página Web de Grupo de Música Folclórica"
-                textoProyecto="Página estática que permite, mediante enlaces, contactar con el grupo, así como revisar los diferentes eventos en los que han participado."
-                tecnologias={[
-                  { src: reactImg, alt: "react-icon" },
-                  { src: javascript, alt: "javascript-icon" },
-                  { src: css, alt: "css-icon" }
-                ]}
-                enlaces={[
-                  { href: "https://suwaypage.netlify.app/", imgSrc: enlaceImg },
-                  {
-                    href: "https://github.com/antonifarinango/suwayStaticPage.git",
-                    imgSrc: "github"
+                    imgSrc: "github",
                   },
                 ]}
                 toggleMode={toggleMode}
