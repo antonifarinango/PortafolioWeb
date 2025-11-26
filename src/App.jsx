@@ -193,7 +193,7 @@ function App() {
               >
                 <a
                   target="_blank"
-                  href="https://drive.google.com/file/d/1sYjYGIzhuLWXzaAE4JVdGIZPDBImjnBC/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/12XY29z6b20r7zQXL0251qO8NPJfdBb8t/view?usp=drive_link"
                   download="Anthony Farinango CV"
                 >
                   Descargar CV
