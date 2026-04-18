@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./proyecto.css";
 
 function Proyecto({
@@ -8,56 +8,51 @@ function Proyecto({
   textoProyecto,
   tecnologias = [],
   enlaces = [],
-  toggleMode,
   gitHub,
   gitHubModoClaro,
 }) {
+  const [isGitHubHovered, setIsGitHubHovered] = useState(false);
+
   return (
-    <div className="contenedor-proyectos">
-      <div className="div-img-proyecto">
-        <img className="img-proyecto" src={imgProyecto} alt={altImgProyecto} />
-      </div>
-      <div className="div-descripcion-proyecto">
-        <span className="nombre-proyecto">{nombreProyecto}</span>
-        <p>{textoProyecto}</p>
-        <div className="div-img-tecnologias-proyectos">
-          {tecnologias.map((tecnologia, index) => (
-            <>
-              <img
-                key={index}
-                className="img-tecnologias-proyectos"
-                src={tecnologia.src}
-                alt={tecnologia.alt || "tecnologia-icon"}
-              />
-            </>
-          ))}
-        </div>
-        {/* Solo muestra la sección si hay enlaces */}
-        {enlaces?.length > 0 && (
-          <div className="div-enlaces-proyecto">
-            {enlaces.map((enlace, index) => (
-              <a
-                key={index}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="enlace-proyecto"
-                href={enlace.href || "https://mi-portafolio-fs.netlify.app/"}
-              >
-                <img
-                  className="img-enlace-proyecto"
-                  src={
-                    enlace.imgSrc === "github"
-                      ? toggleMode
-                        ? gitHub
-                        : gitHubModoClaro
-                      : enlace.imgSrc
-                  }
-                  alt="enlace-icon"
-                />
-              </a>
+    <div className="proyecto-card glass-card reveal-on-scroll">
+      <div className="proyecto-img-wrapper">
+        <img className="proyecto-img" src={imgProyecto} alt={altImgProyecto || nombreProyecto} />
+        <div className="proyecto-overlay">
+           <div className="proyecto-tech-icons">
+            {tecnologias.map((tec, index) => (
+              <img key={index} src={tec.src} alt="tech" className="tech-mini-icon" title={tec.alt} />
             ))}
           </div>
-        )}
+        </div>
+      </div>
+      
+      <div className="proyecto-info">
+        <h3 className="proyecto-title">{nombreProyecto}</h3>
+        <p className="proyecto-text">{textoProyecto}</p>
+        
+        <div className="proyecto-actions">
+          {enlaces.map((enlace, index) => {
+            const isGitHub = enlace.imgSrc === "github";
+            return (
+              <a
+                key={index}
+                href={enlace.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="proyecto-link-btn"
+                onMouseEnter={() => isGitHub && setIsGitHubHovered(true)}
+                onMouseLeave={() => isGitHub && setIsGitHubHovered(false)}
+              >
+                <img
+                  src={isGitHub ? (isGitHubHovered ? gitHubModoClaro : gitHub) : enlace.imgSrc}
+                  alt="link"
+                  className="link-icon"
+                />
+                <span>{isGitHub ? "GitHub" : "Demo"}</span>
+              </a>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
