@@ -33,6 +33,18 @@ import ToDoList from "./assets/proyectosImg/todolist.webp";
 import pokedex from "./assets/proyectosImg/pokedex.webp";
 import peliculas from "./assets/proyectosImg/peliculas.webp";
 import toDoListLocalStorage from "./assets/proyectosImg/todoListLocalStorage.webp";
+import ecommercePeluqueria from "./assets/proyectosImg/img-ecommerce-peluqueria.png"
+import ecommerceRopa from "./assets/proyectosImg/img-ecommerce-ropa.png"
+
+// Galeria Ecommerce Peluqueria
+import peluqueria1 from "./assets/proyectosImg/ecommerce-peluqueria/screencapture-localhost-5173-2026-04-23-21_43_57.png";
+import peluqueria2 from "./assets/proyectosImg/ecommerce-peluqueria/screencapture-localhost-5173-products-2026-04-23-21_36_20.png";
+import peluqueria3 from "./assets/proyectosImg/ecommerce-peluqueria/screencapture-localhost-5173-services-2026-04-23-21_35_39.png";
+import peluqueria4 from "./assets/proyectosImg/ecommerce-peluqueria/img-carrito.png";
+import peluqueria5 from "./assets/proyectosImg/ecommerce-peluqueria/admin-img-2.png";
+import peluqueria6 from "./assets/proyectosImg/ecommerce-peluqueria/img.png";
+
+import ProyectoEspecial from "./components/ProyectoEspecial";
 
 function App() {
   useEffect(() => {
@@ -55,9 +67,67 @@ function App() {
     return () => observer.disconnect();
   }, []);
 
+  const proyectoPrincipal = [
+    
+  ]
+  const proyectosData = [
+    {
+    imgProyecto: ecommercePeluqueria,
+    nombreProyecto: "E-commerce Peluquería",
+    textoProyecto: "Plataforma eCommerce para peluquerías, orientada a la gestión de productos, usuarios y ventas, donde las compras se canalizan a través de WhatsApp para simplificar la comunicación con el cliente. Desarrollada con Spring Boot y React bajo una arquitectura monolítica, donde el frontend es servido directamente desde el backend. Implementa autenticación y autorización mediante JWT con control de roles, y genera reportes de ventas en formato PDF. Utiliza PostgreSQL para garantizar integridad y eficiencia en la gestión de datos.",
+    tecnologias: [{ src: reactImg }, { src: springboot }, { src: java }, { src: sql }],
+    enlaces: [{ href: "https://any-look-peluqueria.onrender.com/", imgSrc: enlaceImg }, { href: "https://github.com/antonifarinango/ecommerce-peluqueria.git", imgSrc: "github" }],
+    galeria: [peluqueria1,peluqueria2, peluqueria3, peluqueria4,],
+    destacado: false
+    },
+    {
+      imgProyecto: ecommerceRopa,
+      nombreProyecto: "E-commerce Moda",
+      textoProyecto: "eCommerce de ropa con Spring Boot y React, arquitectura monolítica, autenticación JWT, ventas vía WhatsApp y reportes en PDF con PostgreSQL.",
+      tecnologias: [{ src: reactImg }, { src: springboot }, { src: java }, { src: sql }],
+      enlaces: [{ href: "https://demo-ecommerce-0qr4.onrender.com/", imgSrc: enlaceImg }, { href: "https://github.com/antonifarinango/ecommerce-ropa.git", imgSrc: "github" }],
+      destacado: false
+    },
+    {
+      imgProyecto: pokedex,
+      nombreProyecto: "Pokedex",
+      textoProyecto: "Aplicación interactiva desarrollada con React que consume la Poke API, permitiendo a los usuarios filtrar y explorar diferentes Pokémon.",
+      tecnologias: [{ src: reactImg }, { src: javascript }, { src: css }, { src: html }],
+      enlaces: [{ href: "https://fsmipokedex.netlify.app/", imgSrc: enlaceImg }, { href: "https://github.com/antonifarinango/Pokedex.git", imgSrc: "github" }]
+    },
+    {
+      imgProyecto: peliculas,
+      nombreProyecto: "Peliculas",
+      textoProyecto: "Aplicación web en React que interactúa con la API de The Movie Database, ofreciendo búsqueda y detalles de películas.",
+      tecnologias: [{ src: reactImg }, { src: javascript }, { src: css }, { src: html }],
+      enlaces: [{ href: "https://fs-peliculas.netlify.app/", imgSrc: enlaceImg }, { href: "https://github.com/antonifarinango/Peliculas.git", imgSrc: "github" }]
+    },
+    {
+      imgProyecto: toDoListLocalStorage,
+      nombreProyecto: "Lista de Tareas",
+      textoProyecto: "Aplicación web de lista de tareas con persistencia en Local Storage, desarrollada con JavaScript puro.",
+      tecnologias: [{ src: javascript }, { src: css }, { src: html }],
+      enlaces: [{ href: "https://todolist-fs.netlify.app/", imgSrc: enlaceImg }, { href: "https://github.com/antonifarinango/todoListLocalStorage.git", imgSrc: "github" }]
+    },
+    {
+      imgProyecto: suwayPageImg,
+      nombreProyecto: "Web Folclórica",
+      textoProyecto: "Página estática para un grupo de música folclórica con gestión de eventos y contactos.",
+      tecnologias: [{ src: reactImg }, { src: javascript }, { src: css }, { src: html }],
+      enlaces: [{ href: "https://suwaypage.netlify.app/", imgSrc: enlaceImg }, { href: "https://github.com/antonifarinango/suwayStaticPage.git", imgSrc: "github" }]
+    },
+    {
+      imgProyecto: ToDoList,
+      nombreProyecto: "Full Stack To-Do",
+      textoProyecto: "CRUD completo con React y Spring Boot, manejando persistencia en MySQL.",
+      tecnologias: [{ src: reactImg }, { src: springboot }, { src: java }, { src: sql }],
+      enlaces: [{ href: "https://github.com/antonifarinango/TodoList.git", imgSrc: "github" }]
+    }
+  ];
+
   return (
     <div className="capa-principal">
-        <FondoParticulas/>
+      <FondoParticulas />
       {/* Overlay */}
       <div className="capa"></div>
 
@@ -117,7 +187,7 @@ function App() {
             </a>
           </div>
           <div className="bounce">
-            <a href="#sobre-mi" className="nav-links text-light"><GoChevronDown size={60}/></a>
+            <a href="#sobre-mi" className="nav-links text-light"><GoChevronDown size={60} /></a>
           </div>
         </section>
 
@@ -149,59 +219,17 @@ function App() {
             ))}
           </div>
         </section>
-
         <section id="proyectos" className="section-container container py-5">
           <h2 className="section-title text-center mb-5 reveal-on-scroll">Mis Proyectos</h2>
           <div className="proyectos-list d-flex flex-column gap-5">
-            <Proyecto
-              imgProyecto={pokedex}
-              nombreProyecto="Pokedex"
-              textoProyecto="Aplicación interactiva desarrollada con React que consume la Poke API, permitiendo a los usuarios filtrar y explorar diferentes Pokémon."
-              tecnologias={[{ src: reactImg }, { src: javascript }, { src: css }, { src: html }]}
-              enlaces={[{ href: "https://fsmipokedex.netlify.app/", imgSrc: enlaceImg }, { href: "https://github.com/antonifarinango/Pokedex.git", imgSrc: "github" }]}
-              gitHub={gitHub}
-              gitHubModoClaro={gitHubModoClaro}
-            />
-            <Proyecto
-              imgProyecto={peliculas}
-              nombreProyecto="Peliculas"
-              textoProyecto="Aplicación web en React que interactúa con la API de The Movie Database, ofreciendo búsqueda y detalles de películas."
-              tecnologias={[{ src: reactImg }, { src: javascript }, { src: css }, { src: html }]}
-              enlaces={[{ href: "https://fs-peliculas.netlify.app/", imgSrc: enlaceImg }, { href: "https://github.com/antonifarinango/Peliculas.git", imgSrc: "github" }]}
-
-              gitHub={gitHub}
-              gitHubModoClaro={gitHubModoClaro}
-            />
-            <Proyecto
-              imgProyecto={toDoListLocalStorage}
-              nombreProyecto="Lista de Tareas"
-              textoProyecto="Aplicación web de lista de tareas con persistencia en Local Storage, desarrollada con JavaScript puro."
-              tecnologias={[{ src: javascript }, { src: css }, { src: html }]}
-              enlaces={[{ href: "https://todolist-fs.netlify.app/", imgSrc: enlaceImg }, { href: "https://github.com/antonifarinango/todoListLocalStorage.git", imgSrc: "github" }]}
-
-              gitHub={gitHub}
-              gitHubModoClaro={gitHubModoClaro}
-            />
-            <Proyecto
-              imgProyecto={suwayPageImg}
-              nombreProyecto="Web Folclórica"
-              textoProyecto="Página estática para un grupo de música folclórica con gestión de eventos y contactos."
-              tecnologias={[{ src: reactImg }, { src: javascript }, { src: css }, { src: html }]}
-              enlaces={[{ href: "https://suwaypage.netlify.app/", imgSrc: enlaceImg }, { href: "https://github.com/antonifarinango/suwayStaticPage.git", imgSrc: "github" }]}
-
-              gitHub={gitHub}
-              gitHubModoClaro={gitHubModoClaro}
-            />
-            <Proyecto
-              imgProyecto={ToDoList}
-              nombreProyecto="Full Stack To-Do"
-              textoProyecto="CRUD completo con React y Spring Boot, manejando persistencia en MySQL."
-              tecnologias={[{ src: reactImg }, { src: springboot }, { src: java }, { src: sql }]}
-              enlaces={[{ href: "https://github.com/antonifarinango/TodoList.git", imgSrc: "github" }]}
-
-              gitHub={gitHub}
-              gitHubModoClaro={gitHubModoClaro}
-            />
+            {proyectosData.map((proyecto, index) => (
+              <Proyecto
+                key={index}
+                {...proyecto}
+                gitHub={gitHub}
+                gitHubModoClaro={gitHubModoClaro}
+              />
+            ))}
           </div>
         </section>
 

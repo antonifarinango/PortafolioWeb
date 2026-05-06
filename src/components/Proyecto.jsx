@@ -10,11 +10,13 @@ function Proyecto({
   enlaces = [],
   gitHub,
   gitHubModoClaro,
+  destacado = false,
 }) {
   const [isGitHubHovered, setIsGitHubHovered] = useState(false);
 
   return (
-    <div className="proyecto-card glass-card reveal-on-scroll">
+    <div className={`proyecto-card glass-card reveal-on-scroll ${destacado ? "destacado" : ""}`}>
+      {destacado && <div className="featured-badge">PROYECTO DESTACADO</div>}
       <div className="proyecto-img-wrapper">
         <img className="proyecto-img" src={imgProyecto} alt={altImgProyecto || nombreProyecto} />
         <div className="proyecto-overlay">
