@@ -36,13 +36,7 @@ import toDoListLocalStorage from "./assets/proyectosImg/todoListLocalStorage.web
 import ecommercePeluqueria from "./assets/proyectosImg/img-ecommerce-peluqueria.png"
 import ecommerceRopa from "./assets/proyectosImg/img-ecommerce-ropa.png"
 
-// Galeria Ecommerce Peluqueria
-import peluqueria1 from "./assets/proyectosImg/ecommerce-peluqueria/screencapture-localhost-5173-2026-04-23-21_43_57.png";
-import peluqueria2 from "./assets/proyectosImg/ecommerce-peluqueria/screencapture-localhost-5173-products-2026-04-23-21_36_20.png";
-import peluqueria3 from "./assets/proyectosImg/ecommerce-peluqueria/screencapture-localhost-5173-services-2026-04-23-21_35_39.png";
-import peluqueria4 from "./assets/proyectosImg/ecommerce-peluqueria/img-carrito.png";
-import peluqueria5 from "./assets/proyectosImg/ecommerce-peluqueria/admin-img-2.png";
-import peluqueria6 from "./assets/proyectosImg/ecommerce-peluqueria/img.png";
+import sistemaReservas from "./assets/proyectosImg/sistemaReservas.png"
 
 import ProyectoEspecial from "./components/ProyectoEspecial";
 
@@ -77,7 +71,6 @@ function App() {
     textoProyecto: "Plataforma eCommerce para peluquerías, orientada a la gestión de productos, usuarios y ventas, donde las compras se canalizan a través de WhatsApp para simplificar la comunicación con el cliente. Desarrollada con Spring Boot y React bajo una arquitectura monolítica, donde el frontend es servido directamente desde el backend. Implementa autenticación y autorización mediante JWT con control de roles, y genera reportes de ventas en formato PDF. Utiliza PostgreSQL para garantizar integridad y eficiencia en la gestión de datos.",
     tecnologias: [{ src: reactImg }, { src: springboot }, { src: java }, { src: sql }],
     enlaces: [{ href: "https://any-look-peluqueria.onrender.com/", imgSrc: enlaceImg }, { href: "https://github.com/antonifarinango/ecommerce-peluqueria.git", imgSrc: "github" }],
-    galeria: [peluqueria1,peluqueria2, peluqueria3, peluqueria4,],
     destacado: false
     },
     {
@@ -87,6 +80,14 @@ function App() {
       tecnologias: [{ src: reactImg }, { src: springboot }, { src: java }, { src: sql }],
       enlaces: [{ href: "https://demo-ecommerce-0qr4.onrender.com/", imgSrc: enlaceImg }, { href: "https://github.com/antonifarinango/ecommerce-ropa.git", imgSrc: "github" }],
       destacado: false
+    },
+    {
+    imgProyecto: sistemaReservas,
+    nombreProyecto: "Sistema de Reservas para Restaurantes",
+    textoProyecto: "Plataforma web orientada a la gestión integral de restaurantes, permitiendo administrar reservas, clientes y disponibilidad de mesas de forma eficiente. El sistema cuenta con un dashboard administrativo, gestión de mesas, control de reservas, registro de clientes, configuración de horarios de atención y disponibilidad en tiempo real. Incluye autenticación y autorización mediante JWT con control de roles para una administración segura.Desarrollada con Spring Boot y React bajo una arquitectura desacoplada, utilizando MySQL para una gestión eficiente, segura y estructurada de los datos.",
+    tecnologias: [{ src: reactImg }, { src: springboot }, { src: java }, { src: sql }],
+    enlaces: [{ href: "https://github.com/antonifarinango/sistemaReservasBack.git", imgSrc: "github" }],
+    destacado: false
     },
     {
       imgProyecto: pokedex,
